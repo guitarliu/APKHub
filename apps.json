@@ -175,6 +175,20 @@
           "description": "国外抖音短视频平台",
           "iconUrl": "icons/tiktok.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1QHFutdnny0Oy4Yxcotl00A?pwd=7uq9"
+        },
+        {
+          "id": 25,
+          "name": "Pinterest",
+          "description": "视频、图片、想法社交分享平台",
+          "iconUrl": "icons/pinterest.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/12MLnxMqqpXyRfGc8Jwr1sw?pwd=q1ab"
+        },
+        {
+          "id": 26,
+          "name": "PuBG Mobile",
+          "description": "国外版吃鸡",
+          "iconUrl": "icons/pubg-mobile.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/17Jx7KPHok7XFv5xk6twjhA?pwd=tsmv"
         }
       ]
     },
@@ -182,119 +196,119 @@
       "name": "AI应用",
       "apps": [
         {
-          "id": 25,
+          "id": 27,
           "name": "Replika",
           "description": "AI聊天伙伴",
           "iconUrl": "icons/replika.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1X3ze-bg7u7v4od0ebbkG8g?pwd=7uq9"
         },
         {
-          "id": 26,
+          "id": 28,
           "name": "Google Gemini",
           "description": "Goolge AI 聊天机器人",
           "iconUrl": "icons/google-gemini.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1A5QB-uvYMlPId25shmXm1w?pwd=7uq9"
         },
         {
-          "id": 27,
+          "id": 29,
           "name": "Perplexity",
           "description": "AI图像识别技术",
           "iconUrl": "icons/perplexity.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1YPpOvm2Q53nLLSTPGjaIOw?pwd=7uq9"
         },
         {
-          "id": 28,
+          "id": 30,
           "name": "DeepL Translator",
           "description": "AI翻译工具",
           "iconUrl": "icons/deepl.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1nu7UsPx5SNgatQknUrc6xQ?pwd=7uq9"
         },
         {
-          "id": 29,
+          "id": 31,
           "name": "Lensa",
           "description": "AI照片编辑应用",
           "iconUrl": "icons/lensa.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1fWnwXJIwSmxYCJZE0o4zcg?pwd=7edc"
         },
         {
-          "id": 30,
+          "id": 32,
           "name": "Grammar",
           "description": "AI写作助手",
           "iconUrl": "icons/grammar.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1POcPliP79TrHz_u3i-YnAQ?pwd=7uq9"
         },
         {
-          "id": 31,
+          "id": 33,
           "name": "ChatGPT",
           "description": "OpenAI聊天机器人",
           "iconUrl": "icons/chatgpt.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1NIIBHDlD0HBSRectXE3tcA?pwd=7uq9"
         },
         {
-          "id": 32,
+          "id": 34,
           "name": "Prisma",
           "description": "AI图像风格转换",
           "iconUrl": "icons/prisma.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1PqVCUiUxLOkxGrNNhN3ySg?pwd=7uq9"
         },
         {
-          "id": 33,
+          "id": 35,
           "name": "Siri",
           "description": "Apple智能语音助手",
           "iconUrl": "icons/siri.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1EffRZIQdH3wi5-DLRxlNKA?pwd=7uq9"
         },
         {
-          "id": 34,
+          "id": 36,
           "name": "Google Assistant",
           "description": "Google智能语音助手",
           "iconUrl": "icons/google-assistant.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1urQ138RKQsAmPJRDdafJrg?pwd=7uq9"
         },
         {
-          "id": 35,
+          "id": 37,
           "name": "Amazon Alexa",
           "description": "Amazon智能语音助手",
           "iconUrl": "icons/alexa.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1Y6RMvGDGM6dyO4wMJkoqXw?pwd=7uq9"
         },
         {
-          "id": 36,
+          "id": 38,
           "name": "Character.AI",
           "description": "AI角色扮演聊天",
           "iconUrl": "icons/character-ai.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1IyPlP-BWxynnEP6DqV5eYw?pwd=7uq9"
         },
         {
-          "id": 37,
+          "id": 39,
           "name": "AI Dungeon",
           "description": "AI文字冒险游戏",
           "iconUrl": "icons/ai-dungeon.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1a8p1I92u5IelnxlMUMOmVw?pwd=7uq9"
         },
         {
-          "id": 38,
+          "id": 40,
           "name": "Pica",
           "description": "AI图像生成",
           "iconUrl": "icons/pica.webp",
           "baiduPanLink": "#"
         },
         {
-          "id": 39,
+          "id": 41,
           "name": "AI Buddy",
           "description": "儿童学习英语的AI助手",
           "iconUrl": "icons/ai-buddy.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1VfUF1d0tXRMxVld7fjLjHA?pwd=7uq9"
         },
         {
-          "id": 40,
+          "id": 42,
           "name": "Microsoft Copilot",
           "description": "微软AI聊天机器人",
           "iconUrl": "icons/microsoft-copilot.webp",
           "baiduPanLink": "https://pan.baidu.com/s/1DYA7AzI91Z2ohEHHyU2GQw?pwd=7uq9"
         },
         {
-          "id": 41,
+          "id": 43,
           "name": "Woebot",
           "description": "心理健康AI",
           "iconUrl": "icons/woebot.webp",
