@@ -176,9 +176,9 @@
         },
         {
           "id": 24,
-          "name": "Runway ML",
-          "description": "AI创意工具",
-          "iconUrl": "icons/runway-ml.webp",
+          "name": "Google Gemini",
+          "description": "Goolge AI 聊天机器人",
+          "iconUrl": "icons/google-gemini.webp",
           "baiduPanLink": "#"
         },
         {
