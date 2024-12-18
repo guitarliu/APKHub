@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APK 下载中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('apps.json');
+                const data = await response.json();
+                renderCategories(data.categories);
+            } catch (error) {
+                console.error('加载应用数据失败:', error);
+            }
+        });
+
+        function renderCategories(categories) {
+            const container = document.getElementById('apps-container');
+            container.innerHTML = categories.map(category => `
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-blue-400 mb-4">${category.name}</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        ${category.apps.map(app => `
+                            <div class="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 cursor-pointer shadow-lg">
+                                <img src="${app.iconUrl}" alt="${app.name}" class="w-20 h-20 mx-auto mb-4 rounded-lg object-cover">
+                                <h3 class="text-lg font-semibold text-center mb-2 text-white">${app.name}</h3>
+                                <p class="text-sm text-gray-400 text-center mb-4 line-clamp-2">${app.description}</p>
+                                <a href="${app.baiduPanLink}" target="_blank" class="w-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition-colors">
+                                    立即下载
+                                </a>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function searchApps() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const appCards = document.querySelectorAll('#apps-container > div');
+            
+            appCards.forEach(categoryDiv => {
+                const appElements = categoryDiv.querySelectorAll('[data-name]');
+                let categoryHasVisibleApps = false;
+
+                appElements.forEach(appEl => {
+                    const name = appEl.getAttribute('data-name').toLowerCase();
+                    const isVisible = name.includes(searchTerm);
+                    appEl.style.display = isVisible ? 'block' : 'none';
+                    
+                    if (isVisible) categoryHasVisibleApps = true;
+                });
+
+                categoryDiv.style.display = categoryHasVisibleApps ? 'block' : 'none';
+            });
+        }
+    </script>
+</head>
+<body class="bg-gray-900 min-h-screen text-white">
+    <div class="container mx-auto max-w-6xl p-6">
+        <h1 class="text-4xl font-bold text-center mb-8 text-blue-400">APK 下载中心</h1>
+        
+        <div class="mb-6 relative">
+            <input 
+                id="search-input"
+                type="text" 
+                placeholder="搜索应用..." 
+                oninput="searchApps()"
+                class="w-full px-4 py-3 pl-10 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </div>
+
+        <div id="apps-container">
+            <!-- 应用将动态加载在这里 -->
+        </div>
+    </div>
+</body>
+</html>

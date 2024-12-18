@@ -1,0 +1,292 @@
+{
+  "categories": [
+    {
+      "name": "谷歌三件套",
+      "apps": [
+        {
+          "id": 1,
+          "name": "Google Play Services",
+          "description": "Google Play 服务支持应用",
+          "iconUrl": "icons/google-play-services.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 2,
+          "name": "Google Play Store",
+          "description": "官方应用市场",
+          "iconUrl": "icons/google-play-store.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 3,
+          "name": "Google 服务框架",
+          "description": "系统级 Google 服务组件",
+          "iconUrl": "icons/google-framework.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 4,
+          "name": "华谷套件",
+          "description": "Google 服务整合包",
+          "iconUrl": "icons/huayu-suite.png",
+          "baiduPanLink": "#"
+        }
+      ]
+    },
+    {
+      "name": "非AI应用",
+      "apps": [
+        {
+          "id": 5,
+          "name": "YouTube",
+          "description": "视频分享平台",
+          "iconUrl": "icons/youtube.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 6,
+          "name": "Google Maps",
+          "description": "全球地图导航应用",
+          "iconUrl": "icons/google-maps.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 7,
+          "name": "Google Drive",
+          "description": "云存储与文件同步",
+          "iconUrl": "icons/google-drive.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 8,
+          "name": "Facebook",
+          "description": "社交网络平台",
+          "iconUrl": "icons/facebook.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 9,
+          "name": "Instagram",
+          "description": "图片和视频分享社交应用",
+          "iconUrl": "icons/instagram.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 10,
+          "name": "WhatsApp",
+          "description": "即时通讯应用",
+          "iconUrl": "icons/whatsapp.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 11,
+          "name": "Snapchat",
+          "description": "消息和多媒体分享应用",
+          "iconUrl": "icons/snapchat.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 12,
+          "name": "Twitter",
+          "description": "社交媒体和微博客平台",
+          "iconUrl": "icons/twitter.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 13,
+          "name": "Google Photos",
+          "description": "照片和视频云存储",
+          "iconUrl": "icons/google-photos.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 14,
+          "name": "Spotify",
+          "description": "音乐流媒体服务",
+          "iconUrl": "icons/spotify.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 15,
+          "name": "Netflix",
+          "description": "在线视频流媒体服务",
+          "iconUrl": "icons/netflix.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 16,
+          "name": "Google Chrome",
+          "description": "网页浏览器",
+          "iconUrl": "icons/chrome.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 17,
+          "name": "Google Search",
+          "description": "搜索引擎应用",
+          "iconUrl": "icons/google-search.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 18,
+          "name": "Trello",
+          "description": "项目管理与协作工具",
+          "iconUrl": "icons/trello.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 19,
+          "name": "Dropbox",
+          "description": "云存储和文件同步",
+          "iconUrl": "icons/dropbox.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 20,
+          "name": "Slack",
+          "description": "团队沟通协作平台",
+          "iconUrl": "icons/slack.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 21,
+          "name": "Google Keep",
+          "description": "笔记和清单应用",
+          "iconUrl": "icons/google-keep.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 22,
+          "name": "Airbnb",
+          "description": "住宿预订平台",
+          "iconUrl": "icons/airbnb.png",
+          "baiduPanLink": "#"
+        }
+      ]
+    },
+    {
+      "name": "AI应用",
+      "apps": [
+        {
+          "id": 23,
+          "name": "Replika",
+          "description": "AI聊天伙伴",
+          "iconUrl": "icons/replika.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 24,
+          "name": "Runway ML",
+          "description": "AI创意工具",
+          "iconUrl": "icons/runway-ml.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 25,
+          "name": "Cortexica",
+          "description": "AI图像识别技术",
+          "iconUrl": "icons/cortexica.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 26,
+          "name": "DeepL Translator",
+          "description": "AI翻译工具",
+          "iconUrl": "icons/deepl.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 27,
+          "name": "Lensa",
+          "description": "AI照片编辑应用",
+          "iconUrl": "icons/lensa.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 28,
+          "name": "Grammarly",
+          "description": "AI写作助手",
+          "iconUrl": "icons/grammarly.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 29,
+          "name": "ChatGPT",
+          "description": "OpenAI聊天机器人",
+          "iconUrl": "icons/chatgpt.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 30,
+          "name": "Prisma",
+          "description": "AI图像风格转换",
+          "iconUrl": "icons/prisma.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 31,
+          "name": "Siri",
+          "description": "Apple智能语音助手",
+          "iconUrl": "icons/siri.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 32,
+          "name": "Google Assistant",
+          "description": "Google智能语音助手",
+          "iconUrl": "icons/google-assistant.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 33,
+          "name": "Alexa",
+          "description": "Amazon智能语音助手",
+          "iconUrl": "icons/alexa.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 34,
+          "name": "Character.AI",
+          "description": "AI角色扮演聊天",
+          "iconUrl": "icons/character-ai.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 35,
+          "name": "AI Dungeon",
+          "description": "AI文字冒险游戏",
+          "iconUrl": "icons/ai-dungeon.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 36,
+          "name": "Pica",
+          "description": "AI图像生成",
+          "iconUrl": "icons/pica.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 37,
+          "name": "AI Buddy",
+          "description": "个人AI助手",
+          "iconUrl": "icons/ai-buddy.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 38,
+          "name": "Mitsuku",
+          "description": "聊天机器人",
+          "iconUrl": "icons/mitsuku.png",
+          "baiduPanLink": "#"
+        },
+        {
+          "id": 39,
+          "name": "Woebot",
+          "description": "心理健康AI",
+          "iconUrl": "icons/woebot.png",
+          "baiduPanLink": "#"
+        }
+      ]
+    }
+  ]
+}
