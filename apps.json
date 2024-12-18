@@ -7,7 +7,7 @@
           "id": 1,
           "name": "Google Play Services",
           "description": "Google Play 服务支持应用",
-          "iconUrl": "icons/google-play-services.png",
+          "iconUrl": "icons/google-play-services.webp",
           "baiduPanLink": "#"
         },
         {
