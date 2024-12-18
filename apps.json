@@ -288,10 +288,10 @@
         },
         {
           "id": 40,
-          "name": "Pica",
-          "description": "AI图像生成",
-          "iconUrl": "icons/pica.webp",
-          "baiduPanLink": "#"
+          "name": "Krea AI",
+          "description": "AI图像、视频生成",
+          "iconUrl": "icons/krea-ai.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1dKBVMIAG6wOyqtCc4C25UA?pwd=2sd6"
         },
         {
           "id": 41,
