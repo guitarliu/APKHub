@@ -183,9 +183,9 @@
         },
         {
           "id": 25,
-          "name": "Cortexica",
+          "name": "Perplexity",
           "description": "AI图像识别技术",
-          "iconUrl": "icons/cortexica.webp",
+          "iconUrl": "icons/perplexity.webp",
           "baiduPanLink": "#"
         },
         {
