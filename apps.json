@@ -8,28 +8,28 @@
           "name": "Google Play Services",
           "description": "Google Play 服务支持应用",
           "iconUrl": "icons/google-play-services.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1jh61f6q8hKZEwKzDKWK8QQ?pwd=i821"
         },
         {
           "id": 2,
           "name": "Google Play Store",
           "description": "官方应用市场",
           "iconUrl": "icons/google-play-store.svg",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1G46SMdDOFLd-wRkjvn6Ipw?pwd=i821"
         },
         {
           "id": 3,
           "name": "Google 服务框架",
           "description": "系统级 Google 服务组件",
           "iconUrl": "icons/google-framework.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1NmndMiAa7p1wmbFNa7bYUg?pwd=i821"
         },
         {
           "id": 4,
           "name": "华谷套件",
           "description": "Google 服务整合包",
           "iconUrl": "icons/huayu-suite.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1xCUcLIVPPumiG11BmaMXAw?pwd=7uq9"
         }
       ]
     },
@@ -41,126 +41,140 @@
           "name": "YouTube",
           "description": "视频分享平台",
           "iconUrl": "icons/youtube.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1WGq-BGsSLd_-KQWy3eaFtA?pwd=7uq9"
         },
         {
           "id": 6,
           "name": "Google Maps",
           "description": "全球地图导航应用",
           "iconUrl": "icons/google-maps.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1H3wOB4O2YksO2Xxw9xDspA?pwd=7uq9"
         },
         {
           "id": 7,
           "name": "Google Drive",
           "description": "云存储与文件同步",
           "iconUrl": "icons/google-drive.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1n4I6QqlzNOrB-dDFgLTJzA?pwd=7uq9"
         },
         {
           "id": 8,
-          "name": "Facebook",
-          "description": "社交网络平台",
-          "iconUrl": "icons/facebook.webp",
-          "baiduPanLink": "#"
+          "name": "Google Earth",
+          "description": "3D可视化谷歌地球",
+          "iconUrl": "icons/google-earth.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1nqhq5OUFeO_akfjRqhL3GA?pwd=7uq9"
         },
         {
           "id": 9,
-          "name": "Instagram",
-          "description": "图片和视频分享社交应用",
-          "iconUrl": "icons/instagram.webp",
-          "baiduPanLink": "#"
+          "name": "Google App",
+          "description": "云存储与文件同步",
+          "iconUrl": "icons/google-app.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1IWIerlBzlahlBeenbl_RHg?pwd=7uq9"
         },
         {
           "id": 10,
-          "name": "WhatsApp",
-          "description": "即时通讯应用",
-          "iconUrl": "icons/whatsapp.webp",
-          "baiduPanLink": "#"
+          "name": "Facebook",
+          "description": "社交网络平台",
+          "iconUrl": "icons/facebook.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1VrmmLeYOS4ehwWQ-VueT3Q?pwd=7uq9"
         },
         {
           "id": 11,
-          "name": "Snapchat",
-          "description": "消息和多媒体分享应用",
-          "iconUrl": "icons/snapchat.webp",
-          "baiduPanLink": "#"
+          "name": "Instagram",
+          "description": "图片和视频分享社交应用",
+          "iconUrl": "icons/instagram.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/19Vhxwh5NDiPwTFDA0QbqMA?pwd=7uq9"
         },
         {
           "id": 12,
-          "name": "Twitter",
-          "description": "社交媒体和微博客平台",
-          "iconUrl": "icons/twitter.webp",
-          "baiduPanLink": "#"
+          "name": "WhatsApp",
+          "description": "即时通讯应用",
+          "iconUrl": "icons/whatsapp.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1lKMRpfycCgKbp5F8ci8gdQ?pwd=g4ia"
         },
         {
           "id": 13,
-          "name": "Google Photos",
-          "description": "照片和视频云存储",
-          "iconUrl": "icons/google-photos.webp",
-          "baiduPanLink": "#"
+          "name": "Snapchat",
+          "description": "消息和多媒体分享应用",
+          "iconUrl": "icons/snapchat.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1FASSGa29R0HaCR8vgaOTPA?pwd=7uq9"
         },
         {
           "id": 14,
-          "name": "Spotify",
-          "description": "音乐流媒体服务",
-          "iconUrl": "icons/spotify.webp",
-          "baiduPanLink": "#"
+          "name": "Twitter",
+          "description": "社交媒体和微博客平台",
+          "iconUrl": "icons/twitter.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1f0NLrXdFwURreM0CDGXHRA?pwd=7uq9"
         },
         {
           "id": 15,
-          "name": "Netflix",
-          "description": "在线视频流媒体服务",
-          "iconUrl": "icons/netflix.webp",
-          "baiduPanLink": "#"
+          "name": "Google Photos",
+          "description": "照片和视频云存储",
+          "iconUrl": "icons/google-photos.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1O1k_LEghUSEW90L9oksZaQ?pwd=7uq9"
         },
         {
           "id": 16,
-          "name": "Google Chrome",
-          "description": "网页浏览器",
-          "iconUrl": "icons/chrome.webp",
-          "baiduPanLink": "#"
+          "name": "Spotify",
+          "description": "音乐流媒体服务",
+          "iconUrl": "icons/spotify.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1GT9kE7b3ijfTFmg2cGUK-A?pwd=7uq9"
         },
         {
           "id": 17,
-          "name": "Gmail",
-          "description": "搜索引擎应用",
-          "iconUrl": "icons/gmail.webp",
-          "baiduPanLink": "#"
+          "name": "Netflix",
+          "description": "在线视频流媒体服务",
+          "iconUrl": "icons/netflix.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1uXqPDxiRQt1ryMzQcsWlXg?pwd=7uq9"
         },
         {
           "id": 18,
-          "name": "Trello",
-          "description": "项目管理与协作工具",
-          "iconUrl": "icons/trello.webp",
-          "baiduPanLink": "#"
+          "name": "Google Chrome",
+          "description": "网页浏览器",
+          "iconUrl": "icons/chrome.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1do5m_jgpV-FvaqwBjYnOYg?pwd=7uq9"
         },
         {
           "id": 19,
-          "name": "Dropbox",
-          "description": "云存储和文件同步",
-          "iconUrl": "icons/dropbox.webp",
-          "baiduPanLink": "#"
+          "name": "Gmail",
+          "description": "搜索引擎应用",
+          "iconUrl": "icons/gmail.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1xqlsY06mmf1AdUdacNnajg?pwd=7uq9"
         },
         {
           "id": 20,
-          "name": "Slack",
-          "description": "团队沟通协作平台，外国版钉钉",
-          "iconUrl": "icons/slack.webp",
-          "baiduPanLink": "#"
+          "name": "Trello",
+          "description": "项目管理与协作工具",
+          "iconUrl": "icons/trello.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1oklxsBpOzqA_0cQdOkOAkA?pwd=7uq9"
         },
         {
           "id": 21,
-          "name": "Google Keep",
-          "description": "笔记和清单应用",
-          "iconUrl": "icons/google-keep.webp",
-          "baiduPanLink": "#"
+          "name": "Dropbox",
+          "description": "云存储和文件同步",
+          "iconUrl": "icons/dropbox.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1PJKH5XVpaRJmKoakB-P4jw?pwd=7uq9"
         },
         {
           "id": 22,
+          "name": "Slack",
+          "description": "团队沟通协作平台，外国版钉钉",
+          "iconUrl": "icons/slack.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1XF7KHH7sMOSiPQmFAuseCA?pwd=7uq9"
+        },
+        {
+          "id": 23,
+          "name": "Google Keep",
+          "description": "笔记和清单应用",
+          "iconUrl": "icons/google-keep.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1h_jSaw1x0odk-Uk0pLnc0A?pwd=7uq9"
+        },
+        {
+          "id": 24,
           "name": "TikTok",
-          "description": "住宿预订平台",
+          "description": "国外抖音短视频平台",
           "iconUrl": "icons/tiktok.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1QHFutdnny0Oy4Yxcotl00A?pwd=7uq9"
         }
       ]
     },
@@ -168,123 +182,123 @@
       "name": "AI应用",
       "apps": [
         {
-          "id": 23,
+          "id": 25,
           "name": "Replika",
           "description": "AI聊天伙伴",
           "iconUrl": "icons/replika.webp",
-          "baiduPanLink": "#"
-        },
-        {
-          "id": 24,
-          "name": "Google Gemini",
-          "description": "Goolge AI 聊天机器人",
-          "iconUrl": "icons/google-gemini.webp",
-          "baiduPanLink": "#"
-        },
-        {
-          "id": 25,
-          "name": "Perplexity",
-          "description": "AI图像识别技术",
-          "iconUrl": "icons/perplexity.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1X3ze-bg7u7v4od0ebbkG8g?pwd=7uq9"
         },
         {
           "id": 26,
-          "name": "DeepL Translator",
-          "description": "AI翻译工具",
-          "iconUrl": "icons/deepl.webp",
-          "baiduPanLink": "#"
+          "name": "Google Gemini",
+          "description": "Goolge AI 聊天机器人",
+          "iconUrl": "icons/google-gemini.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1A5QB-uvYMlPId25shmXm1w?pwd=7uq9"
         },
         {
           "id": 27,
+          "name": "Perplexity",
+          "description": "AI图像识别技术",
+          "iconUrl": "icons/perplexity.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1YPpOvm2Q53nLLSTPGjaIOw?pwd=7uq9"
+        },
+        {
+          "id": 28,
+          "name": "DeepL Translator",
+          "description": "AI翻译工具",
+          "iconUrl": "icons/deepl.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1nu7UsPx5SNgatQknUrc6xQ?pwd=7uq9"
+        },
+        {
+          "id": 29,
           "name": "Lensa",
           "description": "AI照片编辑应用",
           "iconUrl": "icons/lensa.webp",
           "baiduPanLink": "#"
         },
         {
-          "id": 28,
+          "id": 30,
           "name": "Grammar",
           "description": "AI写作助手",
           "iconUrl": "icons/grammar.webp",
-          "baiduPanLink": "#"
-        },
-        {
-          "id": 29,
-          "name": "ChatGPT",
-          "description": "OpenAI聊天机器人",
-          "iconUrl": "icons/chatgpt.webp",
-          "baiduPanLink": "#"
-        },
-        {
-          "id": 30,
-          "name": "Prisma",
-          "description": "AI图像风格转换",
-          "iconUrl": "icons/prisma.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1POcPliP79TrHz_u3i-YnAQ?pwd=7uq9"
         },
         {
           "id": 31,
-          "name": "Siri",
-          "description": "Apple智能语音助手",
-          "iconUrl": "icons/siri.webp",
-          "baiduPanLink": "#"
+          "name": "ChatGPT",
+          "description": "OpenAI聊天机器人",
+          "iconUrl": "icons/chatgpt.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1NIIBHDlD0HBSRectXE3tcA?pwd=7uq9"
         },
         {
           "id": 32,
-          "name": "Google Assistant",
-          "description": "Google智能语音助手",
-          "iconUrl": "icons/google-assistant.webp",
-          "baiduPanLink": "#"
+          "name": "Prisma",
+          "description": "AI图像风格转换",
+          "iconUrl": "icons/prisma.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1PqVCUiUxLOkxGrNNhN3ySg?pwd=7uq9"
         },
         {
           "id": 33,
-          "name": "Amazon Alexa",
-          "description": "Amazon智能语音助手",
-          "iconUrl": "icons/alexa.webp",
-          "baiduPanLink": "#"
+          "name": "Siri",
+          "description": "Apple智能语音助手",
+          "iconUrl": "icons/siri.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1EffRZIQdH3wi5-DLRxlNKA?pwd=7uq9"
         },
         {
           "id": 34,
-          "name": "Character.AI",
-          "description": "AI角色扮演聊天",
-          "iconUrl": "icons/character-ai.webp",
-          "baiduPanLink": "#"
+          "name": "Google Assistant",
+          "description": "Google智能语音助手",
+          "iconUrl": "icons/google-assistant.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1urQ138RKQsAmPJRDdafJrg?pwd=7uq9"
         },
         {
           "id": 35,
-          "name": "AI Dungeon",
-          "description": "AI文字冒险游戏",
-          "iconUrl": "icons/ai-dungeon.webp",
-          "baiduPanLink": "#"
+          "name": "Amazon Alexa",
+          "description": "Amazon智能语音助手",
+          "iconUrl": "icons/alexa.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1Y6RMvGDGM6dyO4wMJkoqXw?pwd=7uq9"
         },
         {
           "id": 36,
+          "name": "Character.AI",
+          "description": "AI角色扮演聊天",
+          "iconUrl": "icons/character-ai.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1IyPlP-BWxynnEP6DqV5eYw?pwd=7uq9"
+        },
+        {
+          "id": 37,
+          "name": "AI Dungeon",
+          "description": "AI文字冒险游戏",
+          "iconUrl": "icons/ai-dungeon.webp",
+          "baiduPanLink": "https://pan.baidu.com/s/1a8p1I92u5IelnxlMUMOmVw?pwd=7uq9"
+        },
+        {
+          "id": 38,
           "name": "Pica",
           "description": "AI图像生成",
           "iconUrl": "icons/pica.webp",
           "baiduPanLink": "#"
         },
         {
-          "id": 37,
+          "id": 39,
           "name": "AI Buddy",
           "description": "儿童学习英语的AI助手",
           "iconUrl": "icons/ai-buddy.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1VfUF1d0tXRMxVld7fjLjHA?pwd=7uq9"
         },
         {
-          "id": 38,
+          "id": 40,
           "name": "Microsoft Copilot",
           "description": "微软AI聊天机器人",
           "iconUrl": "icons/microsoft-copilot.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1DYA7AzI91Z2ohEHHyU2GQw?pwd=7uq9"
         },
         {
-          "id": 39,
+          "id": 41,
           "name": "Woebot",
           "description": "心理健康AI",
           "iconUrl": "icons/woebot.webp",
-          "baiduPanLink": "#"
+          "baiduPanLink": "https://pan.baidu.com/s/1qseOH-gvwBVcYtAjIPsYgQ?pwd=7uq9"
         }
       ]
     }
