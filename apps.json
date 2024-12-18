@@ -14,7 +14,7 @@
           "id": 2,
           "name": "Google Play Store",
           "description": "官方应用市场",
-          "iconUrl": "icons/google-play-store.png",
+          "iconUrl": "icons/google-play-store.svg",
           "baiduPanLink": "#"
         },
         {
