@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON 数据管理器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 添加自定义样式来处理长链接 */
+        .app-card .text-sm p {
+            word-wrap: break-word; /* 允许长文本自动换行 */
+            overflow-wrap: break-word; /* 兼容性更好 */
+            word-break: break-word; /* 进一步优化长文本换行 */
+            white-space: normal; /* 允许内容正常显示 */
+        }
+        .app-card .link-container a {
+            word-break: break-all;
+            display: inline-block;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="container mx-auto">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h1 class="text-2xl font-bold mb-4">JSON 数据管理器</h1>
+            
+            <div class="mb-4">
+                <label class="block mb-2 text-sm font-bold">
+                    上传 json 文件
+                </label>
+                <input 
+                    type="file" 
+                    id="jsonFileInput" 
+                    accept=".json"
+                    class="block w-full text-sm text-gray-500
+                    file:mr-4 file:py-2 file:px-4
+                    file:rounded-full file:border-0
+                    file:text-sm file:font-semibold
+                    file:bg-blue-50 file:text-blue-700
+                    hover:file:bg-blue-100"
+                >
+            </div>
+
+            <div id="jsonEditor" class="hidden">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">数据预览与编辑</h2>
+                    <div>
+                        <button id="addCategoryBtn" class="bg-green-500 text-white px-4 py-2 rounded mr-2">
+                            添加分类
+                        </button>
+
+                        <!-- 弹出框，用于输入自定义分类名称 -->
+                        <div id="categoryModal" class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50 hidden">
+                            <div class="bg-white rounded-lg p-6 w-1/3">
+                                <h3 class="text-xl font-semibold mb-4">请输入分类名称</h3>
+                                <input type="text" id="categoryNameInput" class="w-full p-2 border rounded mb-4" placeholder="分类名称" />
+                                <div class="flex justify-end">
+                                    <button id="cancelCategoryBtn" class="bg-gray-400 text-white px-4 py-2 rounded mr-2">
+                                        取消
+                                    </button>
+                                    <button id="saveCategoryBtn" class="bg-green-500 text-white px-4 py-2 rounded">
+                                        确定
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 弹出框，用于输入自定义应用名称、描述、图标和百度网盘链接 -->
+                        <div id="appModal" class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50 hidden">
+                            <div class="bg-white rounded-lg p-6 w-1/3">
+                                <h3 class="text-xl font-semibold mb-4">请输入应用信息</h3>
+                                
+                                <input type="text" id="appNameInput" class="w-full p-2 border rounded mb-4" placeholder="应用名称" />
+                                <input type="text" id="appDescriptionInput" class="w-full p-2 border rounded mb-4" placeholder="应用描述" />
+                                <input type="text" id="appIconUrlInput" class="w-full p-2 border rounded mb-4" placeholder="图标 URL" />
+                                <input type="text" id="appBaiduPanLinkInput" class="w-full p-2 border rounded mb-4" placeholder="百度网盘链接" />
+
+                                <div class="flex justify-end">
+                                    <button id="cancelAppBtn" class="bg-gray-400 text-white px-4 py-2 rounded mr-2">
+                                        取消
+                                    </button>
+                                    <button id="saveAppBtn" class="bg-green-500 text-white px-4 py-2 rounded">
+                                        确定
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button id="saveJsonBtn" class="bg-blue-500 text-white px-4 py-2 rounded">
+                            保存修改
+                        </button>
+                    </div>
+                </div>
+
+                <div id="categoriesContainer" class="space-y-4">
+                    <!-- 动态生成的分类和应用将在这里显示 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 添加分类按钮事件
+        document.getElementById('addCategoryBtn').addEventListener('click', function() {
+            // 弹出输入框
+            document.getElementById('categoryModal').classList.remove('hidden');
+        });
+
+        // 确定按钮事件
+        document.getElementById('saveCategoryBtn').addEventListener('click', function() {
+            const categoryName = document.getElementById('categoryNameInput').value.trim();
+            if (categoryName) {
+                // 创建新分类并添加到 jsonData 中
+                const newCategory = {
+                    name: categoryName,
+                    apps: []
+                };
+                jsonData.categories.push(newCategory);
+                renderJsonEditor();
+
+                // 隐藏输入框
+                document.getElementById('categoryModal').classList.add('hidden');
+                document.getElementById('categoryNameInput').value = ''; // 清空输入框
+            } else {
+                alert('分类名称不能为空！');
+            }
+        });
+
+        // 取消按钮事件
+        document.getElementById('cancelCategoryBtn').addEventListener('click', function() {
+            // 隐藏输入框
+            document.getElementById('categoryModal').classList.add('hidden');
+            document.getElementById('categoryNameInput').value = ''; // 清空输入框
+        });
+
+        // 全局变量存储 JSON 数据
+        let jsonData = null;
+
+        // 文件上传事件监听
+        document.getElementById('jsonFileInput').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(event) {
+                try {
+                    jsonData = JSON.parse(event.target.result);
+                    renderJsonEditor();
+                } catch (error) {
+                    alert('解析 JSON 文件出错：' + error.message);
+                }
+            };
+
+            reader.readAsText(file);
+        });
+
+        // 渲染 JSON 编辑器
+        function renderJsonEditor() {
+            const container = document.getElementById('categoriesContainer');
+            const editorDiv = document.getElementById('jsonEditor');
+            container.innerHTML = ''; // 清空之前的内容
+            editorDiv.classList.remove('hidden');
+
+            jsonData.categories.forEach((category, catIndex) => {
+                const categoryEl = document.createElement('div');
+                categoryEl.className = 'bg-gray-50 p-4 rounded-lg';
+                
+                // 分类标题和操作按钮
+                const categoryHeader = document.createElement('div');
+                categoryHeader.className = 'flex justify-between items-center mb-4';
+                categoryHeader.innerHTML = `
+                    <h3 class="text-lg font-semibold">${category.name}</h3>
+                    <div>
+                        <button class="add-app-btn text-green-500 mr-2" data-cat-index="${catIndex}">+ 添加应用</button>
+                        <button class="delete-category-btn text-red-500" data-cat-index="${catIndex}">删除分类</button>
+                    </div>
+                `;
+
+                categoryEl.appendChild(categoryHeader);
+
+                // 应用列表
+                const appsContainer = document.createElement('div');
+                appsContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4';
+
+                category.apps.forEach((app, appIndex) => {
+                    const appCard = document.createElement('div');
+                    appCard.className = 'bg-white border rounded-lg p-4 shadow-sm app-card';
+                    appCard.innerHTML = `
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h4 class="font-bold">${app.name}</h4>
+                                <p class="text-sm text-gray-600">${app.description}</p>
+                            </div>
+                            <div>
+                                <button class="edit-app-btn text-blue-500 mr-2" 
+                                    data-cat-index="${catIndex}" 
+                                    data-app-index="${appIndex}">编辑</button>
+                                <button class="delete-app-btn text-red-500" 
+                                    data-cat-index="${catIndex}" 
+                                    data-app-index="${appIndex}">删除</button>
+                            </div>
+                        </div>
+                        <div class="text-sm">
+                            <p><img src="${app.iconUrl}" alt="${app.name}图标" class="w-10 h-10 object-contain mb-2"></p>
+                            <p class="link-container">
+                                <a href="${app.baiduPanLink}" target="_blank" class="text-blue-500 truncate">${app.baiduPanLink}</a></p>
+                        </div>
+                    `;
+                    appsContainer.appendChild(appCard);
+                });
+
+                categoryEl.appendChild(appsContainer);
+                container.appendChild(categoryEl);
+            });
+
+            // 绑定事件监听器
+            bindEventListeners();
+        }
+
+
+        function bindEventListeners() {
+            // 添加应用按钮事件
+            document.querySelectorAll('.add-app-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const catIndex = this.dataset.catIndex;
+
+                    // 显示弹窗
+                    document.getElementById('appModal').classList.remove('hidden');
+                    document.getElementById('saveAppBtn').dataset.catIndex = catIndex; // 保存分类索引
+                    document.getElementById('saveAppBtn').removeAttribute('data-app-index'); // 清除 appIndex
+                });
+            });
+
+            // 取消按钮事件
+            document.getElementById('cancelAppBtn').addEventListener('click', function() {
+                // 隐藏弹窗
+                document.getElementById('appModal').classList.add('hidden');
+                document.getElementById('appNameInput').value = '';
+                document.getElementById('appDescriptionInput').value = '';
+                document.getElementById('appIconUrlInput').value = '';
+                document.getElementById('appBaiduPanLinkInput').value = '';
+            });
+
+            // 删除分类按钮
+            document.querySelectorAll('.delete-category-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const catIndex = this.dataset.catIndex;
+                    jsonData.categories.splice(catIndex, 1);
+                    renderJsonEditor();
+                });
+            });
+
+            // 删除应用按钮
+            document.querySelectorAll('.delete-app-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const catIndex = this.dataset.catIndex;
+                    const appIndex = this.dataset.appIndex;
+                    jsonData.categories[catIndex].apps.splice(appIndex, 1);
+                    renderJsonEditor();
+                });
+            });
+
+            // 编辑应用按钮事件
+            document.querySelectorAll('.edit-app-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const catIndex = this.dataset.catIndex;
+                    const appIndex = this.dataset.appIndex;
+                    const app = jsonData.categories[catIndex].apps[appIndex];
+
+                    // 填充弹窗的输入框
+                    document.getElementById('appNameInput').value = app.name;
+                    document.getElementById('appDescriptionInput').value = app.description;
+                    document.getElementById('appIconUrlInput').value = app.iconUrl;
+                    document.getElementById('appBaiduPanLinkInput').value = app.baiduPanLink;
+
+                    // 显示弹窗
+                    document.getElementById('appModal').classList.remove('hidden');
+
+                    // 更新保存按钮的 catIndex 和 appIndex
+                    document.getElementById('saveAppBtn').dataset.catIndex = catIndex;
+                    document.getElementById('saveAppBtn').dataset.appIndex = appIndex;
+                    renderJsonEditor();
+                });
+            });
+        }
+
+        // 保存应用按钮事件
+        document.getElementById('saveAppBtn').addEventListener('click', function() {
+            const catIndex = this.dataset.catIndex;
+            const appIndex = this.dataset.appIndex; // 获取 appIndex（如果是编辑操作）
+
+            const appName = document.getElementById('appNameInput').value.trim();
+            const appDescription = document.getElementById('appDescriptionInput').value.trim();
+            const appIconUrl = document.getElementById('appIconUrlInput').value.trim();
+            const appBaiduPanLink = document.getElementById('appBaiduPanLinkInput').value.trim();
+
+            // 验证输入内容
+            if (!appName || !appDescription || !appBaiduPanLink){
+                alert('应用名称、描述和百度网盘链接不能为空！');
+            } else {
+                const updatedApp = {
+                    id: Date.now(), // 使用时间戳作为唯一ID
+                    name: appName,
+                    description: appDescription,
+                    iconUrl: appIconUrl || '', // 如果没有提供图标URL，则为空
+                    baiduPanLink: appBaiduPanLink
+                };
+
+                // 如果有 appIndex，说明是编辑，更新应用；如果没有 appIndex，则是新增应用
+                if (appIndex !== undefined) {
+                    jsonData.categories[catIndex].apps[appIndex] = updatedApp; // 更新已有应用
+                } else {
+                    jsonData.categories[catIndex].apps.push(updatedApp); // 新增应用
+                }
+
+                // 渲染JSON编辑器
+                renderJsonEditor();
+
+                // 隐藏弹窗
+                document.getElementById('appModal').classList.add('hidden');
+                document.getElementById('appNameInput').value = '';
+                document.getElementById('appDescriptionInput').value = '';
+                document.getElementById('appIconUrlInput').value = '';
+                document.getElementById('appBaiduPanLinkInput').value = '';
+            }
+        });
+
+        // 保存按钮事件
+        document.getElementById('saveJsonBtn').addEventListener('click', () => {
+            // 确保只会绑定一次事件
+            const jsonString = JSON.stringify(jsonData, null, 2);
+            const blob = new Blob([jsonString], {type: 'application/json'});
+
+            // 移除先前的下载链接，避免重复下载
+            const existingDownloadLink = document.getElementById('downloadLink');
+            if (existingDownloadLink) {
+                existingDownloadLink.remove();
+            }
+
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'apps.json';
+            a.id = 'downloadLink'; // 添加 ID，便于后续移除
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>

@@ -25,7 +25,9 @@
                     <h2 class="text-2xl font-bold text-blue-400 mb-4">${category.name}</h2>
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                         ${category.apps.map(app => `
-                            <div class="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 cursor-pointer shadow-lg">
+                            <div class="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 cursor-pointer shadow-lg app-card" 
+                                data-name="${app.name}"
+                                data-description="${app.description}">
                                 <img src="${app.iconUrl}" alt="${app.name}" class="w-20 h-20 mx-auto mb-4 rounded-lg object-cover">
                                 <h3 class="text-lg font-semibold text-center mb-2 text-white">${app.name}</h3>
                                 <p class="text-sm text-gray-400 text-center mb-4 line-clamp-2">${app.description}</p>
@@ -44,12 +46,15 @@
             const appCards = document.querySelectorAll('#apps-container > div');
             
             appCards.forEach(categoryDiv => {
-                const appElements = categoryDiv.querySelectorAll('[data-name]');
+                const appElements = categoryDiv.querySelectorAll('.app-card');
                 let categoryHasVisibleApps = false;
 
                 appElements.forEach(appEl => {
-                    const name = appEl.getAttribute('data-name').toLowerCase();
-                    const isVisible = name.includes(searchTerm);
+                    const appName = appEl.getAttribute('data-name').toLowerCase();
+                    const appDescription = appEl.getAttribute('data-description').toLowerCase();
+
+                    // 搜索字段只包含 name 和 description
+                    const isVisible = appName.includes(searchTerm) || appDescription.includes(searchTerm);
                     appEl.style.display = isVisible ? 'block' : 'none';
                     
                     if (isVisible) categoryHasVisibleApps = true;
